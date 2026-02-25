@@ -1,0 +1,7 @@
+[project]
+name = "poo-python"
+version = "0.1.0"
+description = "Bookstore"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
