@@ -14,7 +14,7 @@ biblioteca.books = books
 print("Welcome to CST BookStore")
 print("Available books:")
 for book in biblioteca.books:
-    print(f"- {book}")
+    print(f"- {book.title}")
 
 user_id = input("Enter user ID: ")
 
@@ -26,3 +26,19 @@ try:
 except UserNotFoundError as e:
     print(e)
 
+
+book_title = input("Enter book title: ")
+
+try:
+    book_store_book = biblioteca.find_book_by_title(book_title)
+    print(f"Book {book_store_book.title} found and is {'available' if book_store_book.is_available else 'not available'}")  
+except BookNotFoundError as e:
+    print(e)
+
+
+book_store_user.request_book(book_store_book)
+
+try:
+    book_store_book.borrow_book()
+except BookNotAvailableError as e:
+    print(e)

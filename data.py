@@ -38,7 +38,7 @@ books = [
         title        = "1984",
         author       = "George Orwell",
         isbn         = "978-0-452-28423-4",
-        is_available = False,
+        is_available = True,
         publisher    = "Penguin Books",
         pages        = 328,
     ),
