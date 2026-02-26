@@ -13,6 +13,6 @@ class Student(User):
     def request_book(self, book):
         if len(self.borrowed_books) < self.books_limit:
             self.borrowed_books.append(book)
-            print(f"{self.name} borrowed {book}")
+            print(f"{self.name} borrowed {book.title}")
         else:
             print(f"{self.name} has reached the book limit")

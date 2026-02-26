@@ -1,4 +1,5 @@
 from typing import Protocol
+from exceptions import BookNotAvailableError, InvalidTitleError
 
 class BookProtocol(Protocol):
     def borrow_book(self) -> str:
@@ -14,7 +15,7 @@ class BookProtocol(Protocol):
         ...
 
 
-class Book:
+class Book: 
 
     def __init__(self, title, author, isbn, is_available):
         self.title = title
@@ -33,7 +34,7 @@ class Book:
             self.__borrowed_count += 1
             print(f"Book borrowed successfully {self.__borrowed_count} times")
         else:
-            print("Book is not available")
+            raise BookNotAvailableError(self.title)
 
     def return_book(self):
         self.is_available = True
