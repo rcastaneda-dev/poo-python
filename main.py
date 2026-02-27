@@ -4,12 +4,17 @@ from data import users, books
 from students import Student
 from teachers import Teacher
 from exceptions import InvalidTitleError, BookNotAvailableError, UserNotFoundError
+from persistence import Persistence
 
 biblioteca = BookStore('Biblioteca Central')
 
 # add users and books to bookstore
 biblioteca.users = users
 biblioteca.books = books
+
+# save data to file
+persistence = Persistence()
+persistence.save_data(biblioteca)
 
 print("Welcome to CST BookStore")
 print("Available books:")
