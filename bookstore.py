@@ -29,3 +29,11 @@ class BookStore:
             if book.title == title:
                 return book
         raise BookNotFoundError(f"Book {title} not found")
+
+    # static methods are used for utility functions that are related to the class but do NOT use any instance attributes
+    # in this case, validate_isbn is a utility function that is related to the class but does NOT use any instance attributes
+    @staticmethod
+    def validate_isbn(isbn):
+        if len(isbn) != 13 or not isbn.isdigit():
+            raise ValueError("ISBN must be 13 digits")
+        return True

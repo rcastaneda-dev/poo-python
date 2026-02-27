@@ -9,6 +9,7 @@ class BaseUser(ABC):
         pass
 
 class User(BaseUser):
+    # main constructor
     def __init__(self, name, id):
         self.name = name
         self.id = id

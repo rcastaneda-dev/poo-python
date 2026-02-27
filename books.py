@@ -17,12 +17,16 @@ class BookProtocol(Protocol):
 
 class Book: 
 
-    def __init__(self, title, author, isbn, is_available):
+    def __init__(self, title, author, isbn, is_available=True):
         self.title = title
         self.author = author
         self.isbn = isbn
         self.is_available = is_available
         self.__borrowed_count = 0 # double underscore indicates that the variable is private
+
+    @classmethod
+    def create_not_available(cls, title, author, isbn):
+        return cls(title, author, isbn, is_available=False)
 
     # String representation of the object (equivalent to toString() in Java)
     def __str__(self):
