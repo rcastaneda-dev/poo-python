@@ -1,7 +1,14 @@
 from books import Book
 from exceptions import InvalidTitleError
 
-class User:
+from abc import ABC, abstractmethod
+
+class BaseUser(ABC):
+    @abstractmethod
+    def request_book(self, book):
+        pass
+
+class User(BaseUser):
     def __init__(self, name, id):
         self.name = name
         self.id = id

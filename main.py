@@ -13,8 +13,8 @@ biblioteca.books = books
 
 print("Welcome to CST BookStore")
 print("Available books:")
-for book in biblioteca.books:
-    print(f"- {book.title}")
+for book in biblioteca.available_books:
+    print(f"- {book.complete_description}")
 
 user_id = input("Enter user ID: ")
 

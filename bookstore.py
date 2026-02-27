@@ -7,9 +7,10 @@ class BookStore:
         self.name = name
         self.users = []
 
+    @property
     def available_books(self):
         """Return a list of available books"""
-        return [book.title for book in self.books if book.is_available]
+        return [book for book in self.books if book.is_available]
 
     def add_book(self, book):
         """Add a book to the bookstore"""

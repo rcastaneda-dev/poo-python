@@ -40,18 +40,24 @@ class Book:
         self.is_available = True
         print("Book returned successfully")
 
-    # store a list of all borrowed books, then introduce is_popular() method that works when book has been borrowed more than 5 times
+    # store a list of all borrowed books, then introduce is_popular() property that works when book has been borrowed more than 5 times
+    @property
     def is_popular(self):
         return self.__borrowed_count > 5
 
-    def get_borrowed_count(self):
+    @property
+    def borrowed_count(self):
         return self.__borrowed_count
 
-    def set_borrowed_count(self, count):
+    @borrowed_count.setter
+    def borrowed_count(self, count):
         if count > 0:
             self.__borrowed_count = count
-        else:
-            print("Borrowed count must be greater than 0")
+        raise ValueError("borrowed_count must be greater than 0")
+
+    @property
+    def complete_description(self):
+        return f"{self.title} by {self.author} [{self.isbn}]"
 
 class PhysicalBook(Book):
     def __init__(self, title, author, isbn, is_available, publisher, pages):
