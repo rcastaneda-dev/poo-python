@@ -6,15 +6,15 @@ from teachers import Teacher
 from exceptions import InvalidTitleError, BookNotAvailableError, UserNotFoundError
 from persistence import Persistence
 
-biblioteca = BookStore('Biblioteca Central')
-
-# add users and books to bookstore
-biblioteca.users = users
-biblioteca.books = books
-
-# save data to file
+# load data from file (seed from data.py if JSON doesn't exist yet)
 persistence = Persistence()
-persistence.save_data(biblioteca)
+try:
+    biblioteca = persistence.load_data()
+except FileNotFoundError:
+    biblioteca = BookStore('Biblioteca Central')
+    biblioteca.users = users
+    biblioteca.books = books
+    persistence.save_data(biblioteca)
 
 print("Welcome to CST BookStore")
 print("Available books:")
@@ -47,3 +47,7 @@ try:
     book_store_book.borrow_book()
 except BookNotAvailableError as e:
     print(e)
+
+# save data to file
+persistence.save_data(biblioteca)
+

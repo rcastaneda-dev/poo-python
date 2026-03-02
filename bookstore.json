@@ -1,0 +1,177 @@
+{
+    "name": "Biblioteca Central",
+    "books": [
+        {
+            "title": "Cien años de soledad",
+            "author": "Gabriel García Márquez",
+            "isbn": "978-0-06-088328-7",
+            "is_available": false,
+            "publisher": "Editorial Sudamericana",
+            "pages": 471,
+            "type": "PhysicalBook"
+        },
+        {
+            "title": "El señor de los anillos",
+            "author": "J.R.R. Tolkien",
+            "isbn": "978-0-618-64015-7",
+            "is_available": true,
+            "publisher": "Minotauro",
+            "pages": 1178,
+            "type": "PhysicalBook"
+        },
+        {
+            "title": "1984",
+            "author": "George Orwell",
+            "isbn": "978-0-452-28423-4",
+            "is_available": true,
+            "publisher": "Penguin Books",
+            "pages": 328,
+            "type": "PhysicalBook"
+        },
+        {
+            "title": "Sapiens: De animales a dioses",
+            "author": "Yuval Noah Harari",
+            "isbn": "978-84-9992-351-0",
+            "is_available": true,
+            "publisher": "Debate",
+            "pages": 504,
+            "type": "PhysicalBook"
+        },
+        {
+            "title": "El código Da Vinci",
+            "author": "Dan Brown",
+            "isbn": "978-0-307-47427-5",
+            "is_available": true,
+            "publisher": "Doubleday",
+            "pages": 454,
+            "type": "PhysicalBook"
+        },
+        {
+            "title": "Clean Code",
+            "author": "Robert C. Martin",
+            "isbn": "978-0-13-235088-4",
+            "is_available": true,
+            "file_size": 4200,
+            "type": "DigitalBook"
+        },
+        {
+            "title": "The Pragmatic Programmer",
+            "author": "David Thomas & Andrew Hunt",
+            "isbn": "978-0-13-595705-9",
+            "is_available": true,
+            "file_size": 5800,
+            "type": "DigitalBook"
+        },
+        {
+            "title": "Design Patterns",
+            "author": "Gang of Four",
+            "isbn": "978-0-20-163361-5",
+            "is_available": false,
+            "file_size": 7100,
+            "type": "DigitalBook"
+        },
+        {
+            "title": "Introduction to Algorithms",
+            "author": "Thomas H. Cormen et al.",
+            "isbn": "978-0-26-204630-5",
+            "is_available": true,
+            "file_size": 12500,
+            "type": "DigitalBook"
+        },
+        {
+            "title": "Artificial Intelligence: A Modern Approach",
+            "author": "Stuart Russell & Peter Norvig",
+            "isbn": "978-0-13-604259-4",
+            "is_available": true,
+            "file_size": 9800,
+            "type": "DigitalBook"
+        }
+    ],
+    "users": [
+        {
+            "name": "Carlos Méndez",
+            "id": "STU-1001",
+            "borrowed_books": [
+                "978-0-06-088328-7",
+                "978-0-06-088328-7"
+            ],
+            "major": "Computer Science",
+            "books_limit": 3,
+            "type": "Student"
+        },
+        {
+            "name": "María González",
+            "id": "STU-1002",
+            "borrowed_books": [],
+            "major": "Literature",
+            "books_limit": 3,
+            "type": "Student"
+        },
+        {
+            "name": "Andrés Ramírez",
+            "id": "STU-1003",
+            "borrowed_books": [],
+            "major": "History",
+            "books_limit": 3,
+            "type": "Student"
+        },
+        {
+            "name": "Valeria Torres",
+            "id": "STU-1004",
+            "borrowed_books": [],
+            "major": "Mathematics",
+            "books_limit": 3,
+            "type": "Student"
+        },
+        {
+            "name": "Diego Hernández",
+            "id": "STU-1005",
+            "borrowed_books": [],
+            "major": "Physics",
+            "books_limit": 3,
+            "type": "Student"
+        },
+        {
+            "name": "Sofía Martínez",
+            "id": "STU-1006",
+            "borrowed_books": [],
+            "major": "Biology",
+            "books_limit": 3,
+            "type": "Student"
+        },
+        {
+            "name": "Lucía Flores",
+            "id": "STU-1007",
+            "borrowed_books": [],
+            "major": "Philosophy",
+            "books_limit": 3,
+            "type": "Student"
+        },
+        {
+            "name": "Dr. Roberto Vargas",
+            "id": "TCH-2001",
+            "borrowed_books": [],
+            "department": "Computer Science",
+            "books_limit": null,
+            "type": "Teacher"
+        },
+        {
+            "name": "Dra. Elena Ríos",
+            "id": "TCH-2002",
+            "borrowed_books": [],
+            "department": "Literature",
+            "books_limit": null,
+            "type": "Teacher"
+        },
+        {
+            "name": "Dr. Javier Morales",
+            "id": "TCH-2003",
+            "borrowed_books": [],
+            "department": "History",
+            "books_limit": null,
+            "type": "Teacher"
+        }
+    ],
+    "created_at": "2026-03-02T11:36:38.970787",
+    "updated_at": "2026-03-02T11:36:38.970793"
+}
